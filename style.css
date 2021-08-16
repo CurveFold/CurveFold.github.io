@@ -20,7 +20,14 @@
 }
 
 #repos {
-  column-count: 2;
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+}
+
+#about {
+  max-width: 30em;
+  margin: auto;
 }
 
 .glass {
@@ -54,6 +61,9 @@
   .flex {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .flex-item {
+    flex: 0 1 !important;
   }
 }
 
@@ -195,6 +205,7 @@ a {
        -o-transition-duration: 0.2s;
           transition-duration: 0.2s;
 }
+
 a:hover {
   color: #555;
 }
