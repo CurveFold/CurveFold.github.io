@@ -1,4 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+@-webkit-keyframes Animation { 
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
 
 @keyframes Animation { 
     0%{background-position:10% 0%}
@@ -28,19 +41,25 @@ nav {
 }
 
 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 @media (max-width: 800px) {
   .flex {
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
 .flex-item {
-  flex: 1 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
 }
 
 .rainbow {
+  background-image: -o-linear-gradient( 166.5deg,  rgba(129,252,255,1) 0.4%, rgba(255,175,207,1) 49.8%, rgba(255,208,153,1) 98.6% );
   background-image: linear-gradient( -76.5deg,  rgba(129,252,255,1) 0.4%, rgba(255,175,207,1) 49.8%, rgba(255,208,153,1) 98.6% );
   text-shadow: none;
   -webkit-background-clip: text;
@@ -58,8 +77,11 @@ html {
 }
 
 body {
+  background-image: -o-linear-gradient( 13.5deg,  rgba(129,252,255,1) 0.4%, rgba(255,175,207,1) 49.8%, rgba(255,208,153,1) 98.6% );
   background-image: linear-gradient( 76.5deg,  rgba(129,252,255,1) 0.4%, rgba(255,175,207,1) 49.8%, rgba(255,208,153,1) 98.6% );
-
+  background-size: 200% 200%;
+  -webkit-animation: Animation 10s ease infinite;
+          animation: Animation 10s ease infinite;
   font-family: "Roboto", sans-serif;
   color: #555;
 }
@@ -68,8 +90,12 @@ nav {
   margin-bottom: 32px;
 }
 nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
   padding: 0;
 }
@@ -82,7 +108,8 @@ a {
 }
 @media (max-width: 324px) {
   nav ul {
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -91,15 +118,23 @@ button {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  -o-transition-property: box-shadow;
   transition-property: box-shadow;
-  transition-duration: 0.2s;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 button:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   cursor: pointer;
 }
 button:active {
-  box-shadow: inset 0 8px 8px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 8px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 8px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1,
@@ -116,8 +151,12 @@ a {
 }
 
 a {
+  -webkit-transition-property: color;
+  -o-transition-property: color;
   transition-property: color;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 a:hover {
   color: #555;
