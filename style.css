@@ -54,7 +54,6 @@ body {
 
 nav {
   margin-bottom: 32px;
-  position: sticky !important;
 }
 nav ul {
   display: flex;
@@ -66,7 +65,7 @@ nav ul li {
   list-style-type: none;
   margin: 8px;
 }
-nav ul li a {
+a {
   text-decoration: none;
 }
 @media (max-width: 324px) {
