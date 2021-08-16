@@ -5,4 +5,7 @@ fetch("https://api.github.com/users/MystPi/repos").then(data => data.json()).the
   for (let i = 0; i < data.length; i++) {
     list.innerHTML += `<li><a href="${data[i].html_url}">${data[i].name}</a></li>`;
   }
+  fetch("https://api.github.com/users/MystPi").then(about => about.json()).then(about => {
+    document.getElementById("about").innerHTML = about.bio;
+  });
 });
