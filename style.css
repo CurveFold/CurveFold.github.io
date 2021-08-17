@@ -64,6 +64,11 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  #repos {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+  }
 }
 
 .flex-item {
